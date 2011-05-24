@@ -45,21 +45,6 @@ ANS. 'Navayan CSV Export' is a wordpress plugin which helps you to export your w
 
 
 
-Q. Can I export entire database in one shot?
-
-
-ANS. This feature will be available in next release.
-
-
-
-Q. Can I export the tables in different formats ie. excel?
-
-
-ANS. This feature will be available in next release.
-
-
-
-
 == Screenshots ==
 
 
@@ -80,3 +65,5 @@ ANS. This feature will be available in next release.
 = 1.0 =
 
 * First release
+= 1.0.1 =
+* Filtering data with csv format
