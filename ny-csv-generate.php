@@ -2,6 +2,18 @@
 
 ob_clean();
 
+function escapeCSV($str){
+	# if , exist then "$str"
+	if(strpos($str, ',') !== false){
+		$str =  '"'. $str .'"';
+	}
+
+	# replace \r\n (new line) with " "
+	$str = str_replace('\r\n', ' ', $str);
+
+	return $str.',';
+}
+
 function fn_ny_csv_gen($table_name){
     global $wpdb;
     $req_table = isset($_REQUEST['nycsv']) ? $_REQUEST['nycsv'] : '';
