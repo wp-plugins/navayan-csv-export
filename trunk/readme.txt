@@ -5,11 +5,11 @@ Contributors: Amol Nirmala Waman
 Donate link: 
 Tags: navayan, wordpress, csv, export, wp table, wp_comments csv export, wp_links csv export, wp_options csv export, wp_postmeta csv export, post csv export, wp_terms csv export, wp_usermeta csv export, wp_users csv export
 
-Requires at least: 2.0.2
+Requires at least: 3
 
-Tested up to: 2.8.6
+Tested up to: 3.1.3
 
-Stable tag: 1.0
+Stable tag: 1.0.2
 
 
 
@@ -67,3 +67,5 @@ ANS. 'Navayan CSV Export' is a wordpress plugin which helps you to export your w
 * First release
 = 1.0.1 =
 * Filtering data with csv format
+= 1.0.2 =
+= Added compatibility with wordpress v3.1.3
