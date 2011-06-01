@@ -41,7 +41,7 @@ function fn_ny_csv_gen($table_name){
 		foreach($result as $row){
 			for($s = 0; $s < $fields_num; $s++){
 				if($s == 0) $fields .= "\n";	  
-				$fields .= escapeCSV($row -> $each_field[$s]);	  
+				$fields .= escapeCSV($row -> $each_field[$s]);
 			}			
 		}
 

@@ -3,7 +3,7 @@
 Plugin Name: Navayan CSV Export
 Plugin URI: http://blog.navayan.com/
 Description: Navayan CSV Export to export all your table data in CSV (Comma Separate Value) format. You can save an exported CSV file of any table in  'table_name_YYYYMMDD_Hi.csv' format
-Version: 1.0.1
+Version: 1.0.2
 Author: Amol Nirmala Waman
 Author URI: http://www.navayan.com/
 */
@@ -12,7 +12,7 @@ Author URI: http://www.navayan.com/
 if(!function_exists('ny_csv_menu')){
     function ny_csv_menu() {
         if ( function_exists('add_submenu_page') ){
-            add_submenu_page('tools.php', __('Navayan CSV Export'), __("Navayan CSV Export"), 8, 'export', 'fn_ny_csv_ui');
+            add_management_page( __('Navayan CSV Export','navayan-csv-export'), __('Navayan CSV Export','navayan-csv-export'), 'manage_options', '', 'fn_ny_csv_ui');
         }
     }
 }
