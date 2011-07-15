@@ -63,13 +63,10 @@ ANS. 'Navayan CSV Export' is a wordpress plugin which helps you to export your w
 
 = 1.0 =
 * First release
-
 = 1.0.1 =
 * Filtering data with csv format
-
 = 1.0.2 =
 * Added compatibility with wordpress v3.1.3
-
 = 1.0.3
 * Added compatibility with wordpress v3.2.1
 * Exporting CSV data with table field names
