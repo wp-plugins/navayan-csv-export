@@ -32,17 +32,19 @@ function fn_ny_csv_gen($table_name){
             $field = mysql_fetch_field($r1);
             $field = (object) $field;         
             $getfield .= $field -> name.',';
-            $fieldname = $field -> name;
         }
-
+		
         $sub = substr_replace($getfield, '', -1);
+		$fields = $sub; # GET FIELDS NAME
 		$each_field = explode(',', $sub);
-
+		
+		# GET FIELDS VALUES WITH LAST COMMA EXCLUDED
 		foreach($result as $row){
 			for($s = 0; $s < $fields_num; $s++){
 				if($s == 0) $fields .= "\n";	  
 				$fields .= escapeCSV($row -> $each_field[$s]);
-			}			
+			}
+			$fields = substr_replace($fields, '', -1);
 		}
 
         header("Content-type: text/x-csv");
@@ -50,8 +52,7 @@ function fn_ny_csv_gen($table_name){
         header("Content-Disposition: attachment; filename=".$req_table.'_'.date('Ymd_His').".csv");
         header("Pragma: no-cache");
         header("Expires: 0");
-		
-		//echo $sub;
+
         echo $fields;        
     }
 }

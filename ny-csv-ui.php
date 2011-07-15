@@ -1,8 +1,9 @@
+<style type="text/css">.alternate:hover{background:#FFFBCC}</style>
 <div id="wrapper">
      <div class="titlebg"><span class="head i_mange_coupon"><h1>Navayan CSV Export</h1></span></div>
      <div id="page">
 
-         <h5>Export the data of <?php echo get_option('blogname');?> from any table in CSV format</h5>
+         <h5>Export the data of <big><?php echo get_option('blogname');?></big> from any table in CSV format</h5>
         <table border="1" class="widefat" style="width:98%">
             <thead>
                 <tr>

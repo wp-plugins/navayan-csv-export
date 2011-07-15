@@ -2,8 +2,8 @@
 /*
 Plugin Name: Navayan CSV Export
 Plugin URI: http://blog.navayan.com/
-Description: Navayan CSV Export to export all your table data in CSV (Comma Separate Value) format. You can save an exported CSV file of any table in  'table_name_YYYYMMDD_Hi.csv' format
-Version: 1.0.2
+Description: Navayan CSV Export to export all your table data in CSV (Comma Separate Value) format. You can save an exported CSV file of any table in 'table_name_YYYYMMDD_Hi.csv' format
+Version: 1.0.3
 Author: Amol Nirmala Waman
 Author URI: http://www.navayan.com/
 */
@@ -18,7 +18,7 @@ if(!function_exists('ny_csv_menu')){
 }
 add_action('admin_menu', 'ny_csv_menu');
 
-/* GENERATES UI INTERFACE */
+/* GENERATE USER INTERFACE */
 if(!function_exists('fn_ny_csv_ui')){
     function fn_ny_csv_ui(){
         if(file_exists(WP_PLUGIN_DIR.'/navayan-csv-export/ny-csv-ui.php')){
