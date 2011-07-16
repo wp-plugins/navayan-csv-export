@@ -3,8 +3,11 @@
 ob_clean();
 
 function escapeCSV($str){
-	# if , exist then "$str"
-	if(strpos($str, ',') !== false){
+	# if , or " exist then "$str"
+	if(strpos($str, '""') !== false){
+		$str =  '"'. $str .'"';
+	}elseif(strpos($str, ',') !== false || strpos($str, '"') !== false){
+		$str = str_replace('"', '""', $str);
 		$str =  '"'. $str .'"';
 	}
 
@@ -41,7 +44,7 @@ function fn_ny_csv_gen($table_name){
 		# GET FIELDS VALUES WITH LAST COMMA EXCLUDED
 		foreach($result as $row){
 			for($s = 0; $s < $fields_num; $s++){
-				if($s == 0) $fields .= "\n";	  
+				if($s == 0) $fields .= "\n";
 				$fields .= escapeCSV($row -> $each_field[$s]);
 			}
 			$fields = substr_replace($fields, '', -1);
