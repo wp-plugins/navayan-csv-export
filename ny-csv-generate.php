@@ -4,16 +4,12 @@ ob_clean();
 
 function escapeCSV($str){
 	# if , or " exist then "$str"
-	if(strpos($str, '""') !== false){
-		$str =  '"'. $str .'"';
-	}elseif(strpos($str, ',') !== false || strpos($str, '"') !== false){
+	if(strpos($str, ',') !== false || strpos($str, '"') !== false){
 		$str = str_replace('"', '""', $str);
 		$str =  '"'. $str .'"';
 	}
-
 	# replace \r\n (new line) with " "
 	$str = str_replace('\r\n', ' ', $str);
-
 	return $str.',';
 }
 
