@@ -24,7 +24,7 @@ function ny_csv_actions($links, $file){
 if(!function_exists('ny_csv_menu')){
     function ny_csv_menu() {
         if ( function_exists('add_submenu_page') ){
-            add_management_page( __( NY_PLUGIN_NAME, NY_PLUGIN_SLUG), __( NY_PLUGIN_NAME, NY_PLUGIN_SLUG), 'manage_options', '', 'fn_ny_csv_ui');
+						add_management_page( __( NY_PLUGIN_CSV_EXPORT_NAME, NY_PLUGIN_CSV_EXPORT_SLUG), __( NY_PLUGIN_CSV_EXPORT_NAME, NY_PLUGIN_CSV_EXPORT_SLUG), 'manage_options', NY_PLUGIN_CSV_EXPORT_SLUG, 'fn_ny_csv_ui');
 						add_filter('plugin_action_links', 'ny_csv_actions', 10, 2);
         }
     }
@@ -33,8 +33,8 @@ if(!function_exists('ny_csv_menu')){
 /* GENERATE USER INTERFACE */
 if(!function_exists('fn_ny_csv_ui')){
     function fn_ny_csv_ui(){
-        if(file_exists(WP_PLUGIN_DIR.'/'.NY_PLUGIN_SLUG.'/ny-csv-ui.php')){
-            include_once(WP_PLUGIN_DIR.'/'.NY_PLUGIN_SLUG.'/ny-csv-ui.php');
+        if(file_exists(WP_PLUGIN_DIR.'/'.NY_PLUGIN_CSV_EXPORT_SLUG.'/ny-csv-ui.php')){
+            include_once(WP_PLUGIN_DIR.'/'.NY_PLUGIN_CSV_EXPORT_SLUG.'/ny-csv-ui.php');
         }
     }
 }
@@ -42,7 +42,7 @@ if(!function_exists('fn_ny_csv_ui')){
 /* GET CSV DATA */
 if(!function_exists('fn_ny_csv_export')){
     function fn_ny_csv_export(){        
-        include_once(WP_PLUGIN_DIR . '/'.NY_PLUGIN_SLUG.'/ny-csv-generate.php');
+        include_once(WP_PLUGIN_DIR . '/'.NY_PLUGIN_CSV_EXPORT_SLUG.'/ny-csv-generate.php');
         $req_table = isset($_REQUEST['nycsv']) ? $_REQUEST['nycsv'] : '';
         if ($req_table){          
             echo fn_ny_csv_gen($req_table);
