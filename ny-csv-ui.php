@@ -47,7 +47,7 @@
     </div><!-- .ny-left -->
           
 		<div class="ny-right">
-			<?php if( function_exists('ny_widgets')) ny_widgets(); ?>
+			<?php if( function_exists('ny_csv_export_widgets')) ny_csv_export_widgets(); ?>
 		</div><!-- .ny-right -->
 		
 	</div>

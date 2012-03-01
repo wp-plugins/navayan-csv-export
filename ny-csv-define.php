@@ -13,11 +13,11 @@
 	define('NY_DONATE_TEXT', 'We call \'Donation\' as \'<strong><em>Dhammadana</em></strong>\'. It will help us to develop more plugins and themes');
 	define('AUTHOR_PROFILE', 'http://in.linkedin.com/pub/amol-nirmala-waman/27/b33/b3');
 ?>
-<?php function ny_widgets(){ ?>
+<?php function ny_csv_export_widgets(){ ?>
 	<div class="ny-widgets nybox">
 		<h3>About</h3>
 		<div class="ny-widgets-desc">
-			<p id="navayan_logo"><a href="<?php echo NY_SITE;?>" target="_blank"><img src="<?php echo NY_SITE;?>/img/navayan-logo.jpg" alt="<?php echo NY_SITE;?>" /></a></p>
+			<p id="navayan_logo"><a href="http://www.<?php echo NY_SITE;?>" target="_blank"><img src="http://www.<?php echo NY_SITE;?>/img/navayan-logo.jpg" alt="<?php echo NY_SITE;?>" /></a></p>
 			<p><?php echo NY_PLUGIN_CSV_EXPORT_ABOUT;?></p>
 			<form method="post" action="https://www.paypal.com/cgi-bin/webscr" style="text-align:center">
 				<input type="hidden" name="cmd" value="_donations">
