@@ -17,6 +17,10 @@ Navayan CSV Export is a wordpress plugin to export all your table data in CSV (C
 3. To activate plugin go to 'Dashboard -> Plugins -> Inactive'
 4. After activating you will find plugin name under 'Dashboard -> Tools -> Navayan CSV Export'
 
+Requirement: PHP > 5.3.0, WordPress > 3
+
+[Read plugin description in detail](http://blog.navayan.com/navayan-csv-export/)
+
 
 == Frequently Asked Questions ==
 Q. What 'Navayan CSV Export' plugin is?
