@@ -7,7 +7,12 @@ Version: 1.0.6
 Author: Amol Nirmala Waman
 Author URI: http://www.navayan.com/
 */
-include_once ('ny-csv-define.php'); 
+include_once ('ny-csv-define.php');
+
+if (version_compare(PHP_VERSION, '5.3.0') >= 0 ) {
+  echo "Your PHP version is: " . PHP_VERSION . "\n";
+	echo NY_PLUGIN_CSV_EXPORT_NAME . " requires PHP > " . PHP_VERSION . "\n Please upgrade your PHP version to use this plugin.";
+}
 
 /* ADD SETTINGS LINK */
 function ny_csv_actions($links, $file){
