@@ -11,7 +11,7 @@
 	define('NY_PLUGIN_URL', 'http://blog.navayan.com/');
 	define('NY_SITE', 'navayan.com');
 	define('NY_DONATE_TEXT', 'We call \'Donation\' as \'<strong><em>Dhammadana</em></strong>\'. It will help us to develop more plugins and themes');
-	define('AUTHOR_PROFILE', 'http://in.linkedin.com/pub/amol-nirmala-waman/27/b33/b3');
+	define('NY_DONATE_LINK', 'https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=amolnw2778@gmail.com&item_name='. NY_PLUGIN_CSV_EXPORT_NAME );
 ?>
 <?php function ny_csv_export_widgets(){ ?>
 	<div class="ny-widgets nybox">
@@ -19,17 +19,10 @@
 		<div class="ny-widgets-desc">
 			<p id="navayan_logo"><a href="http://www.<?php echo NY_SITE;?>" target="_blank"><img src="http://www.<?php echo NY_SITE;?>/img/navayan-logo.jpg" alt="<?php echo NY_SITE;?>" /></a></p>
 			<p><?php echo NY_PLUGIN_CSV_EXPORT_ABOUT;?></p>
-			<form method="post" action="https://www.paypal.com/cgi-bin/webscr" style="text-align:center">
-				<input type="hidden" name="cmd" value="_donations">
-				<input type="hidden" name="business" value="<?php echo NY_AUTHOR_EMAIL;?>">
-				<input type="hidden" name="lc" value="US">
-				<input type="hidden" name="item_name" value="<?php echo NY_SITE;?>">
-				<input type="hidden" name="no_note" value="0">
-				<input type="hidden" name="currency_code" value="USD">
-				<input type="hidden" name="bn" value="PP-DonationsBF:btn_donate_LG.gif:NonHostedGuest">
-				<input type="image" src="https://www.paypal.com/en_US/i/btn/btn_donate_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
-			</form>			
-			<p><?php echo NY_DONATE_TEXT;?></p>
+			<p id="nydonate">
+				<a href="<?php echo NY_DONATE_LINK;?>" target="_blank"><img src="https://www.paypal.com/en_US/i/btn/btn_donate_LG.gif" alt="Donate using PayPal" /></a><br />
+				<?php echo NY_DONATE_TEXT;?>
+			</p>
 		</div>
 	</div>
 	

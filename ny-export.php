@@ -6,6 +6,7 @@ Description: Navayan CSV Export to export all your table data in CSV (Comma Sepa
 Version: 1.0.6
 Author: Amol Nirmala Waman
 Author URI: http://www.navayan.com/
+Donate Link: https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=amolnw2778@gmail.com&item_name=Navayan CSV Export
 */
 include_once ('ny-csv-define.php');
 

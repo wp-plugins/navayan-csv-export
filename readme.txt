@@ -1,6 +1,6 @@
-=== Plugin Name ===
+=== Navayan CSV Export ===
 Contributors: Amol Nirmala Waman
-Donate link: 
+Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=amolnw2778@gmail.com&item_name=Navayan CSV Export
 Tags: navayan, wordpress, csv, export, wp table, wp_comments csv export, wp_links csv export, wp_options csv export, wp_postmeta csv export, post csv export, wp_terms csv export, wp_usermeta csv export, wp_users csv export
 Requires at least: 3
 Tested up to: 3.3.1
