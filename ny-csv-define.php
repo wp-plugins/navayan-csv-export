@@ -6,13 +6,13 @@
 	define('NY_PLUGIN_CSV_EXPORT_DIR', WP_PLUGIN_URL.'/'.NY_PLUGIN_CSV_EXPORT_SLUG.'/');	
 	define('NY_PLUGIN_CSV_EXPORT_INFO', 'Export the data of <big>'. get_option('blogname') .'</big> from any table in CSV format');
 	define('NY_PLUGIN_CSV_EXPORT_ABOUT', '<a href="'.NY_PLUGIN_CSV_EXPORT_LOCATION.'" target="_blank">'.NY_PLUGIN_CSV_EXPORT_NAME.'</a> is the easist way to exports all your wordpress table data in CSV (Comma Separate Format)');	
-	if( !define('NY_PLUGIN_AUTHOR') ) define('NY_PLUGIN_AUTHOR', 'Amol Nirmala Waman');
-	if( !define('NY_AUTHOR_EMAIL') ) define('NY_AUTHOR_EMAIL', 'amolnw2778@gmail.com');
-	if( !define('NY_PLUGIN_URL') ) define('NY_PLUGIN_URL', 'http://blog.navayan.com/');
-	if( !define('NY_SITE') ) define('NY_SITE', 'navayan.com');
-	if( !define('NY_DONATE_TEXT') ) define('NY_DONATE_TEXT', 'We call \'Donation\' as \'<strong><em>Dhammadana</em></strong>\'. It help us to develop more plugins and themes');
-	if( !define('NY_PAYPAL') ) define('NY_PAYPAL', 'https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=amolnw2778@gmail.com&item_name=');
-	if( !define('NY_DONATE_LINK') ) define('NY_DONATE_LINK', NY_PAYPAL . str_replace(' ', '', NY_PLUGIN_CSV_EXPORT_NAME) );
+	if( !defined('NY_PLUGIN_AUTHOR') ) define('NY_PLUGIN_AUTHOR', 'Amol Nirmala Waman');
+	if( !defined('NY_AUTHOR_EMAIL') ) define('NY_AUTHOR_EMAIL', 'amolnw2778@gmail.com');
+	if( !defined('NY_PLUGIN_URL') ) define('NY_PLUGIN_URL', 'http://blog.navayan.com/');
+	if( !defined('NY_SITE') ) define('NY_SITE', 'navayan.com');
+	if( !defined('NY_DONATE_TEXT') ) define('NY_DONATE_TEXT', 'We call \'Donation\' as \'<strong><em>Dhammadana</em></strong>\'. It help us to develop more plugins and themes');
+	if( !defined('NY_PAYPAL') ) define('NY_PAYPAL', 'https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=amolnw2778@gmail.com&item_name=');
+	if( !defined('NY_DONATE_CSV_EXPORT_LINK') ) define('NY_DONATE_CSV_EXPORT_LINK', NY_PAYPAL . str_replace(' ', '', NY_PLUGIN_CSV_EXPORT_NAME) );
 ?>
 <?php function ny_csv_export_widgets(){ ?>
 	<div class="ny-widgets nybox">
@@ -21,7 +21,7 @@
 			<p id="navayan_logo"><a href="http://www.<?php echo NY_SITE;?>" target="_blank"><img src="http://www.<?php echo NY_SITE;?>/img/navayan-logo.jpg" alt="<?php echo NY_SITE;?>" /></a></p>
 			<p><?php echo NY_PLUGIN_CSV_EXPORT_ABOUT;?></p>
 			<p id="nydonate">
-				<a href="<?php echo NY_DONATE_LINK;?>" target="_blank"><img src="https://www.paypal.com/en_US/i/btn/btn_donate_LG.gif" alt="Donate using PayPal" /></a><br />
+				<a href="<?php echo NY_DONATE_CSV_EXPORT_LINK;?>" target="_blank"><img src="https://www.paypal.com/en_US/i/btn/btn_donate_LG.gif" alt="Donate using PayPal" /></a><br />
 				<?php echo NY_DONATE_TEXT;?>
 			</p>
 		</div>
