@@ -5,13 +5,14 @@
 	define('NY_PLUGIN_CSV_EXPORT_SLUG', 'navayan-csv-export');
 	define('NY_PLUGIN_CSV_EXPORT_DIR', WP_PLUGIN_URL.'/'.NY_PLUGIN_CSV_EXPORT_SLUG.'/');	
 	define('NY_PLUGIN_CSV_EXPORT_INFO', 'Export the data of <big>'. get_option('blogname') .'</big> from any table in CSV format');
-	define('NY_PLUGIN_CSV_EXPORT_ABOUT', '<a href="'.NY_PLUGIN_CSV_EXPORT_LOCATION.'" target="_blank">'.NY_PLUGIN_CSV_EXPORT_NAME.'</a> is the easist way to exports all your wordpress table data in CSV (Comma Separate Format)');
-	define('NY_PLUGIN_AUTHOR', 'Amol Nirmala Waman');
-	define('NY_AUTHOR_EMAIL', 'amolnw2778@gmail.com');
-	define('NY_PLUGIN_URL', 'http://blog.navayan.com/');
-	define('NY_SITE', 'navayan.com');
-	define('NY_DONATE_TEXT', 'We call \'Donation\' as \'<strong><em>Dhammadana</em></strong>\'. It will help us to develop more plugins and themes');
-	define('NY_DONATE_LINK', 'https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=amolnw2778@gmail.com&item_name='. NY_PLUGIN_CSV_EXPORT_NAME );
+	define('NY_PLUGIN_CSV_EXPORT_ABOUT', '<a href="'.NY_PLUGIN_CSV_EXPORT_LOCATION.'" target="_blank">'.NY_PLUGIN_CSV_EXPORT_NAME.'</a> is the easist way to exports all your wordpress table data in CSV (Comma Separate Format)');	
+	if( !define('NY_PLUGIN_AUTHOR') ) define('NY_PLUGIN_AUTHOR', 'Amol Nirmala Waman');
+	if( !define('NY_AUTHOR_EMAIL') ) define('NY_AUTHOR_EMAIL', 'amolnw2778@gmail.com');
+	if( !define('NY_PLUGIN_URL') ) define('NY_PLUGIN_URL', 'http://blog.navayan.com/');
+	if( !define('NY_SITE') ) define('NY_SITE', 'navayan.com');
+	if( !define('NY_DONATE_TEXT') ) define('NY_DONATE_TEXT', 'We call \'Donation\' as \'<strong><em>Dhammadana</em></strong>\'. It help us to develop more plugins and themes');
+	if( !define('NY_PAYPAL') ) define('NY_PAYPAL', 'https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=amolnw2778@gmail.com&item_name=');
+	if( !define('NY_DONATE_LINK') ) define('NY_DONATE_LINK', NY_PAYPAL . str_replace(' ', '', NY_PLUGIN_CSV_EXPORT_NAME) );
 ?>
 <?php function ny_csv_export_widgets(){ ?>
 	<div class="ny-widgets nybox">
