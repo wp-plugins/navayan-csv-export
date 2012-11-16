@@ -10,7 +10,7 @@ Plugin URI: http://blog.navayan.com/navayan-csv-export-easiest-way-to-export-all
 Author URI: http://www.navayan.com/
 */
 
-define('CONST_NYCSV_LOCATION', 'http://wordpress.org/extend/plugins/navayan-subscribe');
+define('CONST_NYCSV_LOCATION', 'http://wordpress.org/extend/plugins/navayan-csv-export');
 define('CONST_NYCSV_NAME', 'Navayan CSV Export' );
 define('CONST_NYCSV_SLUG', 'navayan-csv-export');
 define('CONST_NYCSV_DIR', WP_PLUGIN_URL.'/'.CONST_NYCSV_SLUG.'/');	

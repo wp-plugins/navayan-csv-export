@@ -29,7 +29,8 @@ Orginal post (http://blog.navayan.com/navayan-csv-export-easiest-way-to-export-a
 
 == Screenshots ==
 1. Activated plugin's location in 'Tools' menu
-2. Opening generated CSV file in OpenOffice
+2. Tables ready to export
+3. Opening generated CSV file in OpenOffice
 
 
 == Changelog ==
