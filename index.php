@@ -2,7 +2,7 @@
 /*
 Plugin Name: Navayan CSV Export
 Description: Exports wordpress table data in CSV (Comma Separate Value) format with 'table_YYYYMMDD_HHMMSS.csv' file format.
-Version: 1.0.7
+Version: 1.0.8
 Usage: Go to plugin's page and export the data in CSV format 
 Donate Link: https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=amolnw2778@gmail.com&item_name=NavayanCSVExport
 Author: Amol Nirmala Waman
@@ -22,11 +22,17 @@ add_action('admin_menu', 'NYCSV_MENU');
 add_action('init', 'NYCSV_EXPORT');
 
 /***************************************************
-* PHP REQUIRED VERSION CHECK
+* REQUIRED VERSION CHECK
 * *************************************************/
 function NYCSV_PHP( $v ){
-	if (version_compare(PHP_VERSION, $v, '<') ) { // '5.3.0'
+	if (version_compare(PHP_VERSION, $v, '<') ) {
 		_e( '<h3 style="font-weight: 400; padding:8px 14px; margin-right: 20px; background: #FFCFD1; border: 1px solid #FF3F47">'. CONST_NYCSV_NAME . ' requires PHP 5.3 or newer! Your PHP version is: ' . PHP_VERSION . '. Please ask your host provider to update it</h3>' );
+	}
+}
+function NYCSV_WP( $v ){
+	global $wp_version;			
+	if (version_compare($wp_version, $v, '<')) {
+		_e( '<h3 style="font-weight: 400; padding:8px 14px; margin-right: 20px; background: #FFCFD1; border: 1px solid #FF3F47">You are using WordPress '. $wp_version .'. Support for older WordPress has been dropped! Please <a href="http://wordpress.org/latest.zip" target="_blank">upgrade wordpress</a></h3>' );
 	}
 }
 
@@ -58,6 +64,7 @@ function NYCSV_UI() {
 				<a href="<?php echo CONST_NYCSV_LOCATION; ?>" target="_blank"><?php _e('Rate this plugin');?></a>
 			</p>
 			<?php NYCSV_PHP( '5.3' );?>
+			<?php NYCSV_WP( '3' );?>
 			
 			<div id="nycsvColumns">
 				<div id="nycsvColumn1">

@@ -3,7 +3,7 @@ Contributors: Amol Nirmala Waman
 Tags: navayan, wordpress, csv, export, wp table, wp_comments csv export, wp_links csv export, wp_options csv export, wp_postmeta csv export, post csv export, wp_terms csv export, wp_usermeta csv export, wp_users csv export
 Requires at least: 3
 Tested up to: 3.5-beta-1
-Stable tag: 1.0.7
+Stable tag: 1.0.8
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=amolnw2778@gmail.com&item_name=NavayanCSVExport
 
 Exports wordpress table data in CSV (Comma Separate Value) format with 'table_YYYYMMDD_HHMMSS.csv' file format
@@ -11,9 +11,7 @@ Exports wordpress table data in CSV (Comma Separate Value) format with 'table_YY
 == Description ==
 [Navayan CSV Export](http://blog.navayan.com/navayan-csv-export-easiest-way-to-export-all-wordpress-table-data-to-csv-format/) will export all your table data in CSV (Comma Separate Value) format. When you click on any of 'Export' buttons you will get a prompt dialogue to save or open an exported CSV file of that table. The exported CSV file format is 'table_YYYYMMDD_HHMMSS.csv'
 
-**Requirement:**
-* PHP > 5.3.0
-* WordPress > 3
+**Requirement:** PHP > 5.3.0, WordPress > 3
 
 Orginal post (http://blog.navayan.com/navayan-csv-export-easiest-way-to-export-all-wordpress-table-data-to-csv-format/)
 
@@ -34,6 +32,9 @@ Orginal post (http://blog.navayan.com/navayan-csv-export-easiest-way-to-export-a
 
 
 == Changelog ==
+
+= 1.0.8 (20121117) =
+* NEW: WordPress version check
 
 = 1.0.7 (20121116) =
 * NEW: Simplified code
