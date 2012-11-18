@@ -2,7 +2,7 @@
 /*
 Plugin Name: Navayan CSV Export
 Description: Exports wordpress table data in CSV (Comma Separate Value) format with 'table_YYYYMMDD_HHMMSS.csv' file format.
-Version: 1.0.8
+Version: 1.0.9
 Usage: Go to plugin's page and export the data in CSV format 
 Donate Link: https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=amolnw2778@gmail.com&item_name=NavayanCSVExport
 Author: Amol Nirmala Waman
@@ -10,12 +10,14 @@ Plugin URI: http://blog.navayan.com/navayan-csv-export-easiest-way-to-export-all
 Author URI: http://www.navayan.com/
 */
 
-define('CONST_NYCSV_LOCATION', 'http://wordpress.org/extend/plugins/navayan-csv-export');
+define('CONST_NYCSV_WPURL', 'http://wordpress.org/extend/plugins/navayan-csv-export');
 define('CONST_NYCSV_NAME', 'Navayan CSV Export' );
 define('CONST_NYCSV_SLUG', 'navayan-csv-export');
+define('CONST_NYCSV_VERSION', '1.0.9');
 define('CONST_NYCSV_DIR', WP_PLUGIN_URL.'/'.CONST_NYCSV_SLUG.'/');	
-define('CONST_NYCSV_INFO', 'Export data from following tables to \'table_YYYYMMDD_HHMMSS.csv\' CSV file format' );
 define('CONST_NYCSV_URL', 'http://blog.navayan.com/');
+define('CONST_NYCSV_INFO', 'Export data from WordPress tables to \'table_YYYYMMDD_HHMMSS.csv\' CSV file format' );
+define('CONST_NYCSV_DONATE_INFO', 'We call \'Donation\' as \'<strong><em>Dhammadana</em></strong>\', which helps to continue support for the plugin.' );
 define('CONST_NYCSV_DONATE_URL', 'https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=amolnw2778@gmail.com&item_name='.CONST_NYCSV_NAME );
 
 add_action('admin_menu', 'NYCSV_MENU');
@@ -50,18 +52,18 @@ function NYCSV_MENU() {
 * *************************************************/
 function NYCSV_UI() {
 	wp_enqueue_style( 'nycsv', CONST_NYCSV_DIR . 'ny-csv-ui.css', '', '1.0.6', 'screen' );
+	$srcurl = 'navayan-csv-export-easiest-way-to-export-all-wordpress-table-data-to-csv-format/';
 ?>
 	<div id="wrapper">
 		<div class="titlebg" id="plugin_title">
 			<span class="head i_mange_coupon"><h1><?php echo CONST_NYCSV_NAME;?></h1></span>
 		</div>
 		<div id="page">
-			<p><?php _e(CONST_NYCSV_INFO);?></p>
 			<p>
-				<a href="<?php echo CONST_NYCSV_URL; ?>navayan-csv-export-easiest-way-to-export-all-wordpress-table-data-to-csv-format/" target="_blank"><?php _e("Plugin's Homepage");?></a> &nbsp; &nbsp;
+				<a href="<?php echo CONST_NYCSV_URL . $srcurl;?>" target="_blank"><?php _e("Plugin's Homepage");?></a> &nbsp; &nbsp;
 				<a href="<?php echo CONST_NYCSV_URL; ?>wordpress/" target="_blank"><?php _e('Similar Topics');?></a> &nbsp; &nbsp; 
 				<a href="<?php echo CONST_NYCSV_DONATE_URL; ?>" target="_blank"><?php _e('Make a donation');?></a> &nbsp; &nbsp; 
-				<a href="<?php echo CONST_NYCSV_LOCATION; ?>" target="_blank"><?php _e('Rate this plugin');?></a>
+				<a href="<?php echo CONST_NYCSV_WPURL; ?>" target="_blank"><?php _e('Rate this plugin');?></a>
 			</p>
 			<?php NYCSV_PHP( '5.3' );?>
 			<?php NYCSV_WP( '3' );?>
@@ -85,11 +87,29 @@ function NYCSV_UI() {
 							?>
 							<tr>
 								<td><?php _e($p); ?></td>
-								<td><a class="button" href="tools.php?page=<?php echo CONST_NYCSV_SLUG;?>&nycsv=<?php echo $tableName;?>">Export &nbsp; <strong><?php echo $tableName;?></strong></a></td>
+								<td><a class="button button-large" href="tools.php?page=<?php echo CONST_NYCSV_SLUG;?>&nycsv=<?php echo $tableName;?>">Export &nbsp; <strong><?php echo $tableName;?></strong></a></td>
 							</tr>
 							<?php } } ?>
 						</tbody>
 					</table>
+				</div>
+				<div id="nycsvColumn2">
+					<p><?php _e('You are using <strong>'. CONST_NYCSV_NAME . ' '. CONST_NYCSV_VERSION . '</strong>');?></p>
+					<blockquote>
+						<?php _e(CONST_NYCSV_INFO);?>
+					</blockquote>
+					<blockquote>
+						<?php _e('Donate to us. '. CONST_NYCSV_DONATE_INFO);?><br/>
+						<?php _e('Donating few dollars will make a difference!');?>
+						<a href="http://www.justinparks.com/have-you-made-donation-to-your-wordpress-plugin-developer/" target="_blank"><?php _e('read it why?');?></a>
+					</blockquote>
+					<p>
+						<a href="<?php echo CONST_NYCSV_DONATE_URL;?>" target="_blank" class="button button-primary button-large"><?php _e('Donate through PayPal');?></a>
+						&nbsp;||&nbsp;
+						<a href="<?php echo CONST_NYCSV_WPURL;?>" target="_blank" class="button button-primary button-large"><?php _e('Rate this plugin');?></a>
+						&nbsp;||&nbsp;
+						<a href="<?php echo CONST_NYCSV_URL . $srcurl;?>" target="_blank" class="button button-primary button-large"><?php _e('Say Thanks!');?></a>
+					</p>
 				</div>
 			</div>
 		</div>

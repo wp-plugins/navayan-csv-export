@@ -1,8 +1,6 @@
 #nycsvColumns{margin-right: 20px}
-#nycsvColumn1{width: 400px}
-.widefat td a.button{
-    padding:5px 10px
-}
+#nycsvColumn1, #nycsvColumn2{width: 410px; display: inline-block; vertical-align: top}
+#nycsvColumn2{margin-left: 20px}
 .widefat td a.button:hover{
     border: 1px solid #FCCA25;
     background: #ddd; /* Older browsers */
@@ -17,4 +15,15 @@
     -webkit-box-shadow:none;
     -o-box-shadow: none;
     -ms-box-shadow: none;	
+}
+#nycsvColumns blockquote {
+	font: italic 400 18px/26px Georgia, "Bitstream Charter", serif;
+	margin: 1em 0;
+	border: 1px solid #ccc;
+	background:#f5f5f5;
+	color:#666;
+	padding: 10px 18px;
+	border-radius:4px;
+	-webkit-border-radius:4px;
+	-moz-border-radius:4px
 }
